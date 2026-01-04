@@ -1,9 +1,12 @@
 from django.urls import path
 from .views import RegisterView, LoginView, ProfileView, AdminOnlyView
+from .views import CachedUsersView
+
 
 urlpatterns = [
     path('register/', RegisterView.as_view()),
     path('login/', LoginView.as_view()),
     path('profile/', ProfileView.as_view()),
     path('admin-only/', AdminOnlyView.as_view()),
+    path('users/', CachedUsersView.as_view()),
 ]
